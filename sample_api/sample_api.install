@@ -1,0 +1,47 @@
+<?php
+
+/**
+ * Implements hook_schema().
+ */
+function sample_api_schema() {
+  $schema['sample_api_data'] = [
+    'description' => 'A table to store api data',
+    'fields' => [
+      'id' => [
+        'description' => 'Holds the id value',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ],
+      'client_id' => [
+        'description' => 'Holds the client id value',
+        'type' => 'varchar',
+        'length' => 60,
+        'not null' => FALSE,
+        'default' => 0,
+      ],
+      'client_number' => [
+        'description' => 'Holds the client number value',
+        'type' => 'varchar',
+        'length' => 60,
+        'not null' => FALSE,
+        'default' => 0,
+      ],
+      'service_name' => [
+        'type' => 'varchar',
+        'length' => 60,
+        'not null' => FALSE,
+        'description' => 'Holds the service name value',
+      ],
+      'sub_service_name' => [
+        'type' => 'varchar',
+        'length' => 60,
+        'not null' => FALSE,
+        'description' => 'Holds the sub-service name value',
+      ],
+    ],  
+    'primary key' => ['id'], 
+  ];  
+
+  return $schema;
+}

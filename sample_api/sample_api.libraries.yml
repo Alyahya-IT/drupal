@@ -1,0 +1,11 @@
+multiple-select:
+  css:
+    theme:
+      css/jquery.multiselect.css: { }
+  js:
+    js/jquery.multiselect.js: { }
+    js/multiselect-form.js: { }
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/once

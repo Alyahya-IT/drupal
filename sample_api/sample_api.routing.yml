@@ -1,0 +1,20 @@
+sample_api.page_1:
+  path: '/sample-api/page-1'
+  defaults: 
+    _controller: '\Drupal\sample_api\Controller\PageOneController::pageOne'
+    _title: 'Page One'
+  requirements: 
+    _permission: 'access content'
+  options:
+    no_cache: 'TRUE'
+
+sample_api.page_2:
+  path: '/sample-api/page-2'
+  defaults: 
+    _controller: '\Drupal\sample_api\Controller\PageTwoController::pageTwo'
+    _title: 'Page Two'
+  requirements: 
+    _permission: 'access content'
+    # _user_is_logged_in: 'TRUE'
+  options:
+    no_cache: 'TRUE'

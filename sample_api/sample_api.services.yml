@@ -1,0 +1,4 @@
+services:
+  sample_api.manager:
+    class: Drupal\sample_api\SampleApiManager
+    arguments: ['@entity_type.manager', '@database', '@current_user', '@http_client']
